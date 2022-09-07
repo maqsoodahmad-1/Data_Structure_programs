@@ -33,10 +33,10 @@ int leftRotate(int arr[], int n, int d)
 {
     int temp;
     int i = 0;
-    for (int j = 0; j < d; j++)
+    for (int j = 0; j < d; j++)//this loop will run d times 
     {
         temp = arr[i];
-        for (int k = 0; k < n; k++)
+        for (int k = 0; k < n; k++)//this loop will run n times 
         {
             arr[k] = arr[k + 1];
         }
@@ -45,4 +45,8 @@ int leftRotate(int arr[], int n, int d)
         //  printArray(arr,n);
     }
     return 0;
+    //The time complexity in the worst case(when all the elements need to be rotated ) 
+    //will be O(n^2);
+    //The time complexity in the best case ( when no element is rotated ) will be constant
+    //The time complexity in the average case will be O(n * d);
 }
